@@ -1,0 +1,23 @@
+{
+  "root": "packages/wordwrap/wordwrap",
+  "sourceRoot": "packages/wordwrap/wordwrap/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/wordwrap/wordwrap/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/wordwrap/wordwrap"],
+      "options": {
+        "jestConfig": "packages/wordwrap/wordwrap/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
